@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="../css/style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <h1>Hangman Web</h1>
+      </div>
+      <div class="form-container container">
+        <form method="post" class="button-container">
+          <label>mot :</label><br />
+          <input type="text" name="word"><br />
+          <input type="submit">
+          <p>{{.Text}}</p>
+          <!-- <a href="/">Retour a l'accueil</a> -->
+        </form>
+        <form method="post" class="button-container">
+          <label>difficulté :</label><br />
+          <div class="difficulty-buttons">
+            <input type="submit" name="difficulty" value="easy">
+            <input type="submit" name="difficulty" value="normal">
+            <input type="submit" name="difficulty" value="hard">
+          </div>
+        </form>
+      </div>
+      <div class="result-container container">
+        <pre class="displayed-word">{{.Display}}</pre>
+        <pre>{{.Hangman}}</pre>
+      </div>
+    </div>
+  </body>
+</html>
